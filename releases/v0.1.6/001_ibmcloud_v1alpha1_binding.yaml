@@ -5,6 +5,9 @@ metadata:
   labels:
     controller-tools.k8s.io: "1.0"
   name: bindings.ibmcloud.ibm.com
+  annotations:
+    servicebindingoperator.redhat.io/status.secretName.url: 'binding:env:object:secret'
+    servicebindingoperator.redhat.io/status.secretName.apikey: 'binding:env:object:secret'
 spec:
   additionalPrinterColumns:
   - JSONPath: .status.state
